@@ -23,7 +23,8 @@ app.on('ready', function () {
         x: mainWindowState.x,
         y: mainWindowState.y,
         width: mainWindowState.width,
-        height: mainWindowState.height
+        height: mainWindowState.height,
+        frame: false
     });
 
     if (mainWindowState.isMaximized) {

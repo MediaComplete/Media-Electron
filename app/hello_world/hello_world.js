@@ -1,5 +1,5 @@
 export var greet = function () {
-    return 'Hello World!';
+    return 'Hello World, Tyler!';
 };
 
 export var bye = function () {

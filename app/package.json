@@ -1,15 +1,19 @@
 {
-  "name": "electron-boilerplate",
-  "productName": "Electron Boilerplate",
-  "identifier": "com.example.electron-boilerplate",
-  "description": "Starter for your Electron application. Out of the box ready for serious stuff.",
-  "version": "0.1.0",
-  "author": "Mr Gumby <gumby@sillywalks.com>",
+  "name": "media-complete",
+  "productName": "Media Complete",
+  "identifier": "com.mediacomplete",
+  "description": "A music manager for a modern audience.",
+  "version": "0.0.1",
+  "author": "Arjun Shanker, Tyler Evert, Brian Kramer, Shannon Burns, Drew Murdoch",
   "main": "background.js",
   "config": {
     "target": "development"
   },
   "dependencies": {
-    "fs-jetpack": "^0.7.0"
+    "fs-jetpack": "^0.7.0",
+    "electron-reload": "^0.2.0"
+  },
+  "scripts": {
+    "build": " asar pack app pack\\MediaComplete.asar && electron-builder \"pack\" --platform=win --out=\"dist\""
   }
 }

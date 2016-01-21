@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html, body {
   width: 100%;
   height: 100%;
@@ -6,9 +10,6 @@ html, body {
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: sans-serif;
   background: #222222;
 }
@@ -18,11 +19,12 @@ a {
 }
 
 .header {
-  width: 99999px;
-  height: 40px;
+  width: 100%;
+  height: 30px;
   margin: 0;
-  padding: 0;
-  float: left;
+  padding: 5px;
+  background-color: #111111;
+  color: #EEEEEE;
   -webkit-app-region: drag;
   -webkit-user-select: none;
 }
@@ -38,4 +40,8 @@ a {
 
 .subtitle {
     color: gray;
+}
+
+.right {
+  float: right;
 }

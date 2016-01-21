@@ -2,12 +2,14 @@
 // app starts, and running through entire life of your application.
 // It doesn't have any windows which you can see on screen, but we can open
 // window from here.
+'use strict';
 
 var app = require('app');
 var BrowserWindow = require('browser-window');
 var env = require('./vendor/electron_boilerplate/env_config');
 var devHelper = require('./vendor/electron_boilerplate/dev_helper');
 var windowStateKeeper = require('./vendor/electron_boilerplate/window_state');
+require('electron-reload')(__dirname);
 
 var mainWindow;
 

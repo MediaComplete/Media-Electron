@@ -5,7 +5,8 @@ Thumbs.db
 
 /app/spec.js
 /build/
-/releases/
+/package/
+/release/
 /tmp/
 =======
 # Logs

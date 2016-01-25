@@ -33,7 +33,8 @@ app.on('ready', function () {
         mainWindow.maximize();
     }
 
-    if (env.name === 'test') {
+    mainWindow.loadUrl('file://' + __dirname + '/app.html');
+    /*if (env.name === 'test') {
         mainWindow.loadUrl('file://' + __dirname + '/spec.html');
     } else {
         mainWindow.loadUrl('file://' + __dirname + '/app.html');
@@ -42,7 +43,7 @@ app.on('ready', function () {
     if (env.name !== 'production') {
         devHelper.setDevMenu();
         mainWindow.openDevTools();
-    }
+    }*/
 
     mainWindow.on('close', function () {
         mainWindowState.saveState(mainWindow);

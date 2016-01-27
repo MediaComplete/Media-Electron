@@ -1,8 +1,8 @@
 # Media-Electron
 A new experimental UI platform
 
-
 ## Building a Release Instructions
-1. Install the [Nullsoft Scriptable Install System (NSIS)](http://nsis.sourceforge.net/Main_Page)
-2. Ensure NSIS's install directory is on your PATH
-3. Execute `npm run-script release`
+1. Update the version number in \<projectdir\>/app/package.json
+2. Execute `npm run-script release` in \<projectdir\>
+3. Upload the output files (should be 5) from \<projectdir\>/release to mediacomplete.github.io/download
+4. Every user should automatically receive the update on their next run.

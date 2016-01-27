@@ -1,0 +1,17 @@
+environment:
+  nodejs_version: "0.10"
+
+# Create release
+install:
+  # Get the latest stable version of Node.js or io.js
+  - ps: Install-Product node 0
+  - npm run-script release
+
+# Run tests
+test_script:
+  - node --version
+  - npm --version
+  - npm test
+
+# Don't actually build yet
+build: off

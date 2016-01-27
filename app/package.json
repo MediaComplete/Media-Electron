@@ -1,10 +1,11 @@
 {
   "name": "media-complete",
   "productName": "Media Complete",
+  "title": "Media Complete",
   "identifier": "com.mediacomplete",
   "description": "A music manager for a modern audience.",
-  "version": "0.0.1",
-  "author": { "name" : "Arjun Shanker, Tyler Evert, Brian Kramer, Shannon Burns, Drew Murdoch", "email" : "MC.VoidPointer@gmail.com", "url" : "https://mediacomplete.github.io/" },
+  "version": "0.0.17",
+  "author": { "name" : "https://mediacomplete.github.io/", "email" : "MC.VoidPointer@gmail.com", "url" : "https://mediacomplete.github.io/" },
   "contributors": [
     { "name" : "Arjun Shanker", "email" : "me@shankera.com", "url" : "http://www.shankera.com/" },
     { "name" : "Tyler Evert", "email" : "tevert2@gmail.com", "url" : "" },
@@ -17,6 +18,7 @@
     "target": "development"
   },
   "dependencies": {
+    "electron-squirrel-startup": "^0.1.4",
     "fs-jetpack": "^0.7.0",
     "electron-reload": "^0.2.0"
   }

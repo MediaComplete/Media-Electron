@@ -3,6 +3,11 @@ environment:
   github_auth_token:
     secure: G0cU5afl4gb8zB4hmxW3DHOaXUmYFNRgV9U90Sn48tNvzLu/WprYgC1F1exv1D3j
 
+branches:
+  only:
+    - master
+skip_tags: true
+
 # Create release
 install:
   # Get the latest stable version of Node.js or io.js

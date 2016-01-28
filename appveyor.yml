@@ -37,6 +37,7 @@ on_success:
   - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_auth_token):x-oauth-basic@github.com`n"
   - git config --global user.email "appveyor@mediacomplete.github.io"
   - git config --global user.name "Appveyor"
+  - git checkout master
   - git add app/package.json
   - git commit -m "Appveyor - bumping patch number for successful build"
   - git push

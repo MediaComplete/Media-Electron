@@ -1,5 +1,7 @@
 environment:
   nodejs_version: "0.10"
+  github_auth_token:
+    secure: G0cU5afl4gb8zB4hmxW3DHOaXUmYFNRgV9U90Sn48tNvzLu/WprYgC1F1exv1D3j
 
 # Create release
 install:
@@ -26,6 +28,18 @@ deploy:
   set_public: true
   folder: squirrel
   artifact: release
+
+# Push back the updated package.json. The version numbers need to keep climbing,
+# or the release building process will break.
+# Note that this will use a token tied to Tyler's account, but will show Appveyor as the name.
+on_success:
+  - git config --global credential.helper store
+  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:github_auth_token):x-oauth-basic@github.com`n"
+  - git config --global user.email "appveyor@mediacomplete.github.io"
+  - git config --global user.name "Appveyor"
+  - git add app/package.json
+  - git commit -m "Appveyor - bumping patch number for successful build"
+  - git push
 
 # Don't actually build yet
 build: off

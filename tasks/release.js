@@ -38,10 +38,12 @@ gulp.task('release', ['build'], function () {
           "setup_icon": ".\\resources\\logo_small.ico"
         }, function done (err) {
           console.error(err);
+          process.exit(1);
         });
       }
     } else {
       console.error(err);
+      process.exit(1);
     }
   });
 });

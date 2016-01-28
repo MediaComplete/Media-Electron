@@ -37,8 +37,11 @@ gulp.task('release', ['build'], function () {
           "loading_gif": __dirname + "\\..\\resources\\logo_large.gif",
           "setup_icon": ".\\resources\\logo_small.ico"
         }, function done (err) {
-          console.error(err);
-          process.exit(1);
+          if (err != null)
+          {
+            console.error(err);
+            process.exit(1);  
+          }
         });
       }
     } else {

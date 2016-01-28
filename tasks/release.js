@@ -32,7 +32,7 @@ gulp.task('release', ['build'], function () {
         squirrel({
           "path": __dirname + "\\..\\" + appPath[i],
           "out": "release\\" + releaseArch,
-          "remote_releases": "https://raw.githubusercontent.com/MediaComplete/MediaComplete.github.io/master/download/" + releaseArch,
+          "remote_releases": "https://s3-us-west-2.amazonaws.com/media-electron/squirrel/" + releaseArch,
           "overwrite": true,
           "loading_gif": __dirname + "\\..\\resources\\logo_large.gif",
           "setup_icon": ".\\resources\\logo_small.ico"

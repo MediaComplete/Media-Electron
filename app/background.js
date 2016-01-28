@@ -76,7 +76,7 @@
       } else {
         // Check for updates
         autoUpdater.setFeedURL(
-          'https://raw.githubusercontent.com/MediaComplete/MediaComplete.github.io/master/download/MediaComplete-'
+          'https://s3-us-west-2.amazonaws.com/media-electron/squirrel/MediaComplete-'
           + os.platform() + "-" + os.arch());
         autoUpdater.checkForUpdates();
       }

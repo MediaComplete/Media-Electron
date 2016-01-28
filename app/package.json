@@ -5,13 +5,37 @@
   "identifier": "com.mediacomplete",
   "description": "A music manager for a modern audience.",
   "version": "0.0.17",
-  "author": { "name" : "https://mediacomplete.github.io/", "email" : "MC.VoidPointer@gmail.com", "url" : "https://mediacomplete.github.io/" },
+  "author": {
+    "name": "https://mediacomplete.github.io/",
+    "email": "MC.VoidPointer@gmail.com",
+    "url": "https://mediacomplete.github.io/"
+  },
   "contributors": [
-    { "name" : "Arjun Shanker", "email" : "me@shankera.com", "url" : "http://www.shankera.com/" },
-    { "name" : "Tyler Evert", "email" : "tevert2@gmail.com", "url" : "" },
-    { "name" : "Brian Kramer", "email" : "", "url" : "" },
-    { "name" : "Shannon Burns", "email" : "", "url" : "" },
-    { "name" : "Drew Murdoch", "email" : "", "url" : "" }
+    {
+      "name": "Arjun Shanker",
+      "email": "me@shankera.com",
+      "url": "http://www.shankera.com/"
+    },
+    {
+      "name": "Tyler Evert",
+      "email": "tevert2@gmail.com",
+      "url": ""
+    },
+    {
+      "name": "Brian Kramer",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Shannon Burns",
+      "email": "",
+      "url": ""
+    },
+    {
+      "name": "Drew Murdoch",
+      "email": "",
+      "url": ""
+    }
   ],
   "main": "background.js",
   "config": {

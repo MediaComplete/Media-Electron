@@ -6,6 +6,7 @@ install:
   # Get the latest stable version of Node.js or io.js
   - ps: Install-Product node 0
   - npm install
+  - cd app && npm version patch && cd ..
   - npm run-script release
 
 # Run tests
@@ -13,6 +14,18 @@ test_script:
   - node --version
   - npm --version
   - npm test
+
+after_test:
+  - ps: $root = Resolve-Path .\release; [IO.Directory]::GetFiles($root.Path, '*.*', 'AllDirectories') | % { Push-AppveyorArtifact $_ -FileName $_.Substring($root.Path.Length + 1) -DeploymentName release }
+
+deploy:
+  provider: S3
+  access_key_id: AKIAIFO3745YZXCHKHAQ
+  secret_access_key: 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
+  bucket: media-electron
+  set_public: true
+  folder: squirrel
+  artifact: release
 
 # Don't actually build yet
 build: off

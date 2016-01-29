@@ -48,5 +48,10 @@ on_success:
   - git commit -m "Appveyor - bumping patch number for successful build"
   - git push
 
+# We want to ignore our own commits.
+skip_commits:
+  message: /Appveyor - bumping patch number for successful build/
+
+
 # Don't actually build yet
 build: off

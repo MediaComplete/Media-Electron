@@ -1,3 +1,12 @@
+/* COLORS! */
+@backgroundColor: #222222;
+@accentBackgroundColor: #111111;
+@buttonColor: #111111;
+@textColor: #EEEEEE;
+
+/* OTHER FILES! */
+@import "icons.less";
+
 * {
   box-sizing: border-box;
 }
@@ -11,7 +20,7 @@ html, body {
 
 body {
   font-family: sans-serif;
-  background: #222222;
+  background: @backgroundColor;
 }
 
 a {
@@ -23,19 +32,32 @@ a {
   height: 30px;
   margin: 0;
   padding: 5px;
-  background-color: #111111;
-  color: #EEEEEE;
+  background-color: @accentBackgroundColor;
+  color: @textColor;
   -webkit-app-region: drag;
   -webkit-user-select: none;
 }
 
-.header button {
-  -webkit-app-region: no-drag;
+.footer {
+  position: absolute;
+  bottom: 0;
 }
 
 .container {
   width: 100%;
   text-align: center;
+}
+
+.resizable {
+  border-style: solid;
+  border-width: 2px;
+  border-color: @accentBackgroundColor;
+}
+
+.thirds {
+  width: 33.33333333%;
+  float: left;
+  height: auto;
 }
 
 .subtitle {
@@ -44,4 +66,10 @@ a {
 
 .right {
   float: right;
+}
+
+button {
+  color: @textColor;
+  background-color: @buttonColor;
+  border-width: 0;
 }

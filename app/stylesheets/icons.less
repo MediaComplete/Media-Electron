@@ -1,0 +1,42 @@
+.icon {
+  width: 14px;
+  height: 14px;
+  margin: 3px 10px;
+}
+
+.icon-minimize {
+  .icon;
+
+  border-bottom-width: 2px;
+  border-color: @textColor;
+}
+
+.icon-maximize {
+  .icon;
+
+  border-top-width: 4px;
+  border-right-width: 2px;
+  border-left-width: 2px;
+  border-bottom-width: 2px;
+  border-color: @textColor;
+}
+
+.icon-close {
+  .icon;
+}
+.icon-close::before,
+.icon-close::after {
+  content: ' ';
+  background-color: @textColor;
+  top: 7px;
+  width: 2px;
+  height: 15px;
+  display: block;
+  position: absolute;
+}
+.icon-close::before {
+  transform: rotate(135deg);
+}
+.icon-close::after {
+  transform: rotate(45deg);
+}

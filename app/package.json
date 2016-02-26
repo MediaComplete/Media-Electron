@@ -42,8 +42,10 @@
     "target": "development"
   },
   "dependencies": {
+    "electron-reload": "^0.2.0",
     "electron-squirrel-startup": "^0.1.4",
     "fs-jetpack": "^0.7.0",
-    "electron-reload": "^0.2.0"
+    "jquery": "^2.2.1",
+    "jquery-ui": "^1.10.5"
   }
 }
